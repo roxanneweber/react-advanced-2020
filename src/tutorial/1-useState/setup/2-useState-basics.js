@@ -26,8 +26,8 @@ const UseStateBasics = () => {
 	//* 3) finally you have to add this click action in the return; below we added 'handleClick' to the onClick element; whenever a person clicks this element (button) then it will 'run' the clickHandler function
 
 	const [text, setText] = useState('random title');
-	console.log(setText);
-	console.log(text);
+	// console.log(setText);
+	// console.log(text);
 
 	const handleClick = () => {
 		if (text === 'random title') {
@@ -36,6 +36,8 @@ const UseStateBasics = () => {
 			setText('random title');
 		}
 	};
+
+
 	return (
 		<>
 			<h2>{text}</h2>

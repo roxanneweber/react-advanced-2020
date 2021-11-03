@@ -1,25 +1,18 @@
 import React, { useState } from 'react';
 
+// here we are passing in the object directly
 const UseStateObject = () => {
 	const [person, setPerson] = useState({
 		name: 'peter',
 		age: '24',
 		message: 'random message',
 	});
-
-	const changeMessage = () => {
-		setPerson({ ...person, message: 'hello world' });
-		console.log(person);
-	};
+	console.log(person);
+	const changeMessage = () => {};
 
 	return (
 		<>
-			<h3>Name: {person.name}</h3>
-			<h3>Age: {person.age}</h3>
-			<h3>Message: {person.message}</h3>
-			<button className='btn' onClick={changeMessage}>
-				change message
-			</button>
+			<h2>Use State Object</h2>
 		</>
 	);
 };

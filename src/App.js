@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Setup from './tutorial/1-useState/setup/4-useState-object';
+import Setup from './tutorial/1-useState/setup/5-useState-counter';
 // import SetupFinal from './tutorial/1-useState/final/1-error-example';
 // import above gives final code for Setup; add <SetupFinal /> to code below to view
 
 function App() {
 	return (
 		<div className='container'>
-			<h2>Advanced Tutorial</h2>
 			<Setup />
 		</div>
 	);
