@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 //* useState function required
 
+//! hooks ALWAYS start with 'use' prefix
+//! components where we involve these hooks MUST start with UPPER case (i.e., UseStateBasics)
+//! the 'hook' must be in the component body (between the first and last {} )
+//! cannot call the hook conditionally (using if...then, if...else, etc.)
+
 const UseStateBasics = () => {
 	// console.log(useState);
 	// console.log(useState('hello world'));
