@@ -8,9 +8,28 @@ import React, { useState } from 'react';
 const ControlledInputs = () => {
 	const [firstName, setFirstName] = useState('');
 	const [email, setEmail] = useState('');
+	const [people, setPeople] = useState([]);
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		console.log(firstName, email); // this is where you would put your submit server information
+		if (firstName && email) {
+			const person = {
+				id: new Date().getTime().toString(),
+				firstName,
+				email,
+			};
+			console.log(person);
+			setPeople((people) => {
+				return [...people, person];
+			});
+
+			setFirstName('');
+			setEmail('');
+			console.log('submit the form');
+		} else {
+			console.log('empty values');
+		}
 	};
 	return (
 		<>
@@ -41,6 +60,16 @@ const ControlledInputs = () => {
 						add person
 					</button>
 				</form>
+				{people.map((person, index) => {
+					const { id, firstName, email } = person;
+
+					return (
+						<div className='item'>
+							<h4>{firstName}</h4>
+							<p>{email}</p>
+						</div>
+					);
+				})}
 			</article>
 		</>
 	);
